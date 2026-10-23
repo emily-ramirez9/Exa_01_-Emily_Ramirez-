@@ -62,8 +62,8 @@ else:
         pilita.pop()
 
     if correcta:
-        print("La expresion esta bien escrita.")
+        print("Esta bien escrita")
     else:
-        print("La expresion esta mal escrita.")
+        print("Esta mal escrita")
 
 
