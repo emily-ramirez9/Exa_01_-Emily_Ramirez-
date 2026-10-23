@@ -22,10 +22,9 @@ pilita = cls_Stack()
 
 #Cambios al codigo
 if not pilita.isempty():
-    print("Error: la pila debe estar vacia.")
+    print("Error: no se encuentra")
 else:
     correcta = True
-
     cierres = {
         ")": "(",
         "]": "[",
@@ -33,7 +32,6 @@ else:
     }
 
     for caracter in expresion:
-
         if caracter in "([{":
             if not pilita.isfull():
                 pilita.push(caracter)
