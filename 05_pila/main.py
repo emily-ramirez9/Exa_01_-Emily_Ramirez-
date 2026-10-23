@@ -7,9 +7,11 @@ Period.......: 3-2026
 Documents....: Exam_01 - 01_Stack
 Goals........: Using stack class
 Professor....: Jorge Ruiz (york)
-Student......:
+Student......: Emily Angelica Ramirez Matarrita
 ================================================================================================="""
 from cls_Stack import cls_Stack
+
+expresion = input("La expresión matemática es: ")
 
 print()
 print("Stack implementation")
@@ -18,13 +20,48 @@ print("=================================")
 # Create stack instance
 pilita = cls_Stack()
 
-# Load data chunk into stack while this not full
-for letra in "Cuquita":
-    if not pilita.isfull():
-        pilita.push(letra)
-    else:
-        break
+#Cambios al codigo
+if not pilita.isempty():
+    print("Error: no se encuentra")
+else:
+    correcta = True
+    cierres = {
+        ")": "(",
+        "]": "[",
+        "}": "{"
+    }
 
-while not pilita.isempty():
-    print(pilita.pop())
+    for caracter in expresion:
+        if caracter in "([{":
+            if not pilita.isfull():
+                pilita.push(caracter)
+            else:
+                correcta = False
+                break
+
+        elif caracter in ")]}":
+
+            if pilita.isempty():
+                correcta = False
+                break
+
+            apertura = pilita.peek()
+
+            if apertura == cierres[caracter]:
+                pilita.pop()
+            else:
+                correcta = False
+                break
+
+    if not pilita.isempty():
+        correcta = False
+
+    while not pilita.isempty():
+        pilita.pop()
+
+    if correcta:
+        print("Esta bien escrita la RegEx")
+    else:
+        print("Esta mal escrita la RegEx")
+
 
