@@ -2,12 +2,12 @@
 Institute....: Universidad Técnica Nacional
 Campus.......: Pacífico
 Career.......: Tecnologías de Información
-Course.......: ITI-321 - Programación III
+Course.......: ITI-321 - Programación II
 Period.......: 3-2026
 Documents....: Exam_01 - 01_Stack
 Goals........: Using stack class
 Professor....: Jorge Ruiz (york)
-Student......: Emily Abgelica Ramirez Matarrita
+Student......: Emily Angelica Ramirez Matarrita
 ================================================================================================="""
 from cls_Stack import cls_Stack
 
@@ -26,7 +26,7 @@ jugadores = [
 ]
 repartir_naipes(jugadores)
 
-print(f"{'merlina':<15}{'Pericles':<15}{'Tio Lucas':<15}{'homero':<15}") 
+print(f"{'Merlina':<15}{'Pericles':<15}{'Tio Lucas':<15}{'Homero':<15}") 
 ganador = None
 while any(not jugador.partida.isempty() for jugador in jugadores):
 
