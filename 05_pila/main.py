@@ -62,8 +62,8 @@ else:
         pilita.pop()
 
     if correcta:
-        print("Esta bien escrita")
+        print("Esta bien escrita la RegEx")
     else:
-        print("Esta mal escrita")
+        print("Esta mal escrita la RegEx")
 
 
